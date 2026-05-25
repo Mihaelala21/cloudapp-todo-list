@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloudapp-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cloudapp
+  template:
+    metadata:
+      labels:
+        app: cloudapp
+    spec:
+      containers:
+      - name: cloudapp
+        image: cloudapp:v2
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cloudapp-service
+spec:
+  type: NodePort
+  selector:
+    app: cloudapp
+  ports:
+    - port: 5000
+      targetPort: 5000
+      nodePort: 30000
