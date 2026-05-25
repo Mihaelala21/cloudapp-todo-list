@@ -1,64 +1,39 @@
-\# ☁️ Cloud To-Do App
+# ☁️ Cloud To-Do App
 
+O aplicație modernă To-Do List dezvoltată pentru laboratorul de **Aplicații Cloud Native**.
 
+## 🌐 Aplicație live
 
-O aplicație modernă To-Do List dezvoltată pentru laboratorul de \*\*Aplicații Cloud Native\*\*.
+Accesează aplicația online la:  
+**👉 [https://cloudapp-256486840714.us-central1.run.app](https://cloudapp-256486840714.us-central1.run.app)**
 
+---
 
-
-\## 🚀 Tehnologii utilizate
-
-
+## 🚀 Tehnologii utilizate
 
 | Categorie | Tehnologii |
-
 |-----------|------------|
+| **Backend** | Python, Flask |
+| **Frontend** | HTML5, CSS3, JavaScript |
+| **Containerizare** | Docker, containerd, Rancher Desktop |
+| **Orchestrare** | Kubernetes, kubectl |
+| **CI/CD** | Google Cloud Build, Cloud Run, Artifact Registry |
+| **Version Control** | Git, GitHub |
 
-| \*\*Backend\*\* | Python, Flask |
+## 📋 Funcționalități
 
-| \*\*Frontend\*\* | HTML5, CSS3, JavaScript |
+- ✅ Adăugare sarcini noi
+- ✅ Marcare sarcini ca finalizate
+- ✅ Ștergere sarcini
+- ✅ Statistici în timp real (Total, Completate, Rămase)
+- ✅ Interfață modernă cu gradient mov
+- ✅ Endpoint de sănătate (`/health`)
 
-| \*\*Containerizare\*\* | Docker, containerd, Rancher Desktop |
+## 🏃 Cum rulează aplicația
 
-| \*\*Orchestrare\*\* | Kubernetes, kubectl |
-
-| \*\*CI/CD\*\* | Google Cloud Build, Cloud Run, Artifact Registry |
-
-| \*\*Version Control\*\* | Git, GitHub |
-
-
-
-\## 📋 Funcționalități
-
-
-
-\- ✅ Adăugare sarcini noi
-
-\- ✅ Marcare sarcini ca finalizate
-
-\- ✅ Ștergere sarcini
-
-\- ✅ Statistici în timp real (Total, Completate, Rămase)
-
-\- ✅ Interfață modernă cu gradient mov
-
-\- ✅ Endpoint de sănătate (`/health`)
-
-
-
-\## 🏃 Cum rulează aplicația
-
-
-
-\### Local cu Kubernetes (Rancher Desktop)
-
-
+### Local cu Kubernetes (Rancher Desktop)
 
 ```bash
-
 kubectl apply -f deployment.yaml
-
 kubectl get pods
-
 kubectl get svc
-
